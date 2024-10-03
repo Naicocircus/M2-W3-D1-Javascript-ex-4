@@ -12,7 +12,11 @@ function crazySum(num1, num2) {
     else {
         return num1 + num2;
     }
-};
+};                            
+
+function crazySum(num1,num2){
+    return (num1 === num2) ? (num1+num2) *3 : (num1+num2);
+}
 
 
 
@@ -26,7 +30,7 @@ console.log(crazySum(20, 50));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 function boundary(num) {
-    if (num >= 20 && num <= 100 || num === 400) {
+    if (num.isInteger() && (num >= 20 && num <= 100) || num === 400) {
         return true;
     } else {
         return false;
@@ -41,7 +45,7 @@ console.log(boundary(410));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 function reverseString(str) {
-    return str.split('').reverse().join(''); 
+    return str.split().reverse().join(''); 
   };
 
 console.log(reverseString('EPICODE'));
@@ -55,11 +59,11 @@ console.log(reverseString('EPICODE'));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 function upperFirst(str) {
-   
     return str.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)) .join(' '); 
   };
 
   console.log(upperFirst("ho fatto un array bellissimo"));    
+  
 
 
 /* ESERCIZIO 5
@@ -73,7 +77,7 @@ function giveMeRandom(n) {
     
     for (let i = 0; i < n; i++) {
       let randomNum = Math.floor(Math.random() * 11); 
-      randomNumbers.push(randomNum);
+      randomNumbers.push(randomNum); 
     }
     return randomNumbers;
   };                             
